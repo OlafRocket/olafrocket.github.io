@@ -1,0 +1,12 @@
+/* Primary colour: orange. Hextra derives all accent shades from these. */
+:root {
+  --primary-hue: 26deg;
+  --primary-saturation: 95%;
+  --primary-lightness: 48%;
+}
+
+.dark {
+  --primary-hue: 30deg;
+  --primary-saturation: 100%;
+  --primary-lightness: 55%;
+}

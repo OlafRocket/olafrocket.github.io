@@ -1,0 +1,47 @@
+baseURL: "https://olafrocket.github.io/"
+title: "lang_python"
+languageCode: en
+theme: hextra
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - name: Docs
+      pageRef: /docs
+      weight: 1
+    - name: Demos
+      pageRef: /demos
+      weight: 2
+    - name: Blog
+      pageRef: /blog
+      weight: 3
+    - name: Search
+      weight: 4
+      params:
+        type: search
+    - name: GitHub
+      weight: 5
+      url: "https://github.com/OlafRocket/mariadb-lang-python"
+      params:
+        icon: github
+
+params:
+  # Base URL of the source repository. Used by the "repo" shortcode.
+  repoURL: "https://github.com/OlafRocket/mariadb-lang-python"
+  repoBranch: main
+  navbar:
+    displayTitle: true
+    displayLogo: false
+  footer:
+    displayPoweredBy: false
+    displayCopyright: false
+  theme:
+    default: system
+    displayToggle: true

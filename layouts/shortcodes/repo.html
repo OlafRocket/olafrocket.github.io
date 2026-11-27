@@ -1,0 +1,5 @@
+{{- /* URL of a file or folder in the source repository.
+       Usage: [USAGE.md]({{< repo "USAGE.md" >}})
+              [examples/ping]({{< repo "examples/ping" "tree" >}}) */ -}}
+{{- $kind := .Get 1 | default "blob" -}}
+{{- printf "%s/%s/%s/%s" site.Params.repoURL $kind site.Params.repoBranch (.Get 0) -}}
