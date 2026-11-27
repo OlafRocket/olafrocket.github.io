@@ -1,46 +1,60 @@
 ---
-title: lang_python
+title: It's not Rocket Science Lab
 layout: hextra-home
 ---
 
-{{< hextra/hero-badge >}}
-  <div class="hx:w-2 hx:h-2 hx:rounded-full hx:bg-primary-400"></div>
-  <span>Experimental, open source</span>
-{{< /hextra/hero-badge >}}
+<div class="lab-hero">
+
+<img class="lab-hero-logo" src="/images/logo.svg" alt="" width="72" height="72" />
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-headline >}}
-  Python inside MariaDB
+  It's not Rocket Science Lab
 {{< /hextra/hero-headline >}}
 </div>
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
-  A server plugin that runs CPython 3.14 and numpy&nbsp;<br class="hx:sm:block hx:hidden" />in the server process
+  Open source R&amp;D for software people actually use.
 {{< /hextra/hero-subtitle >}}
 </div>
 
 <div class="hx:mb-6">
-{{< hextra/hero-button text="Get started" link="docs" >}}
+{{< hextra/hero-button text="Read the blog" link="blog" >}}
 </div>
 
-<div class="hx:mt-6"></div>
+</div>
 
-{{< hextra/feature-grid >}}
+<hr class="lab-rule" />
+
+<h2 class="lab-section">Projects</h2>
+
+{{< hextra/feature-grid cols="2" >}}
   {{< hextra/feature-card
-    title="Inline code"
-    subtitle="py_eval and py_exec put Python inside a SQL expression, with no DDL."
+    title="lang_python"
+    icon="code"
+    subtitle=`<span class="lab-tag">experimental</span> Python inside MariaDB: a server plugin that runs CPython 3.14 and numpy in the server process. Inline code, named functions, columnar aggregates.`
+    link="docs"
+    style="background: radial-gradient(ellipse at 50% 90%, rgba(150, 82, 38, 0.30), rgba(255, 255, 255, 0));"
   >}}
   {{< hextra/feature-card
-    title="Named functions"
-    subtitle="py_create_function stores Python functions in the server. py_call runs them once per row."
+    title="lang_js"
+    icon="lightning-bolt"
+    subtitle=`<span class="lab-tag">prototype</span> JavaScript stored routines for MariaDB. In preparation.`
+    style="background: radial-gradient(ellipse at 50% 90%, rgba(96, 58, 34, 0.28), rgba(255, 255, 255, 0));"
   >}}
   {{< hextra/feature-card
-    title="Columnar aggregates"
-    subtitle="py_agg passes a whole group of rows to Python as numpy arrays, also over window frames."
+    title="y-cpp"
+    icon="share"
+    subtitle=`<span class="lab-tag">library</span> A minimal port of the Yjs shared editing library to native C++.`
+    link="https://github.com/OlafRocket/y-cpp"
+    style="background: radial-gradient(ellipse at 50% 90%, rgba(200, 110, 40, 0.28), rgba(255, 255, 255, 0));"
   >}}
   {{< hextra/feature-card
-    title="Server access"
-    subtitle="The built-in inhost module runs SQL from Python inside the hosting server."
+    title="apv-rtp"
+    icon="video-camera"
+    subtitle=`<span class="lab-tag">prototype</span> RTP payload format for APV (Advanced Professional Video), as a C99 library: packetizer and depacketizer for the IETF draft.`
+    link="https://github.com/OlafRocket/apv-rtp"
+    style="background: radial-gradient(ellipse at 50% 90%, rgba(120, 96, 52, 0.28), rgba(255, 255, 255, 0));"
   >}}
 {{< /hextra/feature-grid >}}

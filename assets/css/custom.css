@@ -1,12 +1,188 @@
-/* Primary colour: orange. Hextra derives all accent shades from these. */
+/* Primary colour: brown; orange is the accent in the hero and the logo. Hextra derives all accent shades from these. */
 :root {
-  --primary-hue: 26deg;
-  --primary-saturation: 95%;
-  --primary-lightness: 48%;
+  --primary-hue: 22deg;
+  --primary-saturation: 58%;
+  --primary-lightness: 36%;
+
+  /* Page background: warm cream. */
+  --hx-color-white: #f4e9da;
+
+  /* Dark mode background: dark brown. */
+  --hx-color-dark: #1c130e;
 }
 
 .dark {
-  --primary-hue: 30deg;
-  --primary-saturation: 100%;
-  --primary-lightness: 55%;
+  --primary-hue: 26deg;
+  --primary-saturation: 70%;
+  --primary-lightness: 62%;
+}
+
+/* Display font for the site name: Fraunces, served from static/fonts
+   (SIL Open Font License). */
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/fraunces-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Home page hero: centred, over a soft glow in the primary colour. */
+.lab-hero {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 2.5rem 0 1.25rem;
+  text-align: center;
+}
+
+.lab-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -3rem 0 0 0;
+  background: radial-gradient(
+    ellipse 55% 65% at 50% 35%,
+    hsl(24deg 70% 42% / 0.28),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.lab-hero-logo {
+  display: block;
+  margin: 0 auto;
+  width: 4.5rem;
+  height: 4.5rem;
+  filter: drop-shadow(0 6px 14px hsl(100deg 40% 25% / 0.25));
+}
+
+/* Site name: display font, larger, with a gradient in the primary colour. */
+.lab-hero h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 6.5vw, 4.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  background-image: linear-gradient(
+    100deg,
+    hsl(18deg 55% 14%),
+    hsl(20deg 62% 26%) 55%,
+    hsl(26deg 88% 44%)
+  );
+}
+
+.dark .lab-hero h1 {
+  background-image: linear-gradient(
+    100deg,
+    hsl(28deg 45% 84%),
+    hsl(24deg 55% 66%) 55%,
+    hsl(28deg 95% 60%)
+  );
+}
+
+/* Status tag in a project card. */
+.lab-tag {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: hsl(20deg 60% 22%);
+  background: hsl(22deg 60% 36% / 0.20);
+}
+
+.dark .lab-tag {
+  color: hsl(28deg 70% 80%);
+  background: hsl(24deg 60% 50% / 0.25);
+}
+
+/* Project cards lift slightly on hover. */
+.hextra-feature-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hextra-feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px hsl(var(--primary-hue) 40% 30% / 0.12);
+}
+
+/* Section heading on the home page. */
+.lab-section {
+  margin: 0 0 1rem;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Readability: larger, darker text for the hero subtitle and the cards. */
+.lab-hero p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: hsl(20deg 35% 20%);
+}
+
+.hextra-feature-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: hsl(20deg 30% 22%);
+}
+
+.dark .lab-hero p,
+.dark .hextra-feature-card p {
+  color: hsl(30deg 30% 85%);
+}
+
+.lab-tag {
+  font-size: 0.78rem;
+}
+
+/* Top menu (Docs, Demos, Blog): darker, larger, medium weight. */
+.hextra-nav-container nav > a[title] {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(20deg 45% 16%);
+}
+
+.hextra-nav-container nav > a[title]:hover {
+  color: hsl(24deg 85% 38%);
+}
+
+.dark .hextra-nav-container nav > a[title] {
+  color: hsl(30deg 35% 88%);
+}
+
+.dark .hextra-nav-container nav > a[title]:hover {
+  color: hsl(28deg 95% 65%);
+}
+
+/* Line between the hero and the rest of the home page. */
+.lab-rule {
+  width: 100%;
+  height: 2px;
+  margin: 0 0 1.25rem;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(22deg 55% 32% / 0.55) 15%,
+    hsl(26deg 88% 44% / 0.7) 50%,
+    hsl(22deg 55% 32% / 0.55) 85%,
+    transparent
+  );
+}
+
+.dark .lab-rule {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(26deg 60% 60% / 0.5) 15%,
+    hsl(28deg 95% 60% / 0.7) 50%,
+    hsl(26deg 60% 60% / 0.5) 85%,
+    transparent
+  );
 }

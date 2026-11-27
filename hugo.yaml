@@ -1,5 +1,5 @@
 baseURL: "https://olafrocket.github.io/"
-title: "lang_python"
+title: "It's not Rocket Science Lab"
 languageCode: en
 theme: hextra
 enableRobotsTXT: true
@@ -38,10 +38,10 @@ params:
   repoBranch: main
   navbar:
     displayTitle: true
-    displayLogo: false
+    displayLogo: true
   footer:
     displayPoweredBy: false
     displayCopyright: false
   theme:
-    default: system
+    default: dark
     displayToggle: true

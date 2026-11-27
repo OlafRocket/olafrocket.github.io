@@ -1,6 +1,7 @@
 # olafrocket.github.io
 
-Static site built with [Hugo](https://gohugo.io) and the
+Sources of the web site "It's not Rocket Science Lab". Static site built
+with [Hugo](https://gohugo.io) and the
 [Hextra](https://github.com/imfing/hextra) theme.
 
 | Path | Content |
@@ -13,6 +14,10 @@ Static site built with [Hugo](https://gohugo.io) and the
 | `content/docs/` | Introduction, getting started, reference links |
 | `content/demos/` | One page per demo |
 | `content/blog/` | Blog posts |
+| `archetypes/blog.md` | Template for new blog posts |
+| `layouts/_partials/navbar-title.html` | Theme override: no site name in the navbar of the home page |
+| `static/fonts/` | Display font Fraunces (SIL Open Font License) |
+| `static/images/authors/` | Author pictures |
 | `themes/hextra/` | Theme, git submodule pinned to v0.13.0 |
 
 ## Requirements
@@ -35,13 +40,22 @@ The site is served at <http://localhost:1313/>.
 
 ## New blog post
 
-Create `content/blog/<slug>.md`:
+```sh
+hugo new blog/<slug>.md
+```
+
+The file is created from `archetypes/blog.md`:
 
 ```markdown
 ---
 title: Post title
 date: 2026-11-23
-tags: [design]
+draft: true
+tags: []
+authors:
+  - name: Olaf Razzoli
+    link: https://github.com/OlafRocket
+    image: /images/authors/olaf.png
 ---
 
 Summary paragraph.
@@ -50,6 +64,11 @@ Summary paragraph.
 
 Body.
 ```
+
+| Field | Meaning |
+|---|---|
+| `draft` | A draft is shown by `hugo server -D` only and is not deployed. Remove the line to publish |
+| `authors` | Name, link and picture shown under the post title. One entry per author; pictures are in `static/images/authors/` |
 
 ## Links to repository files
 
