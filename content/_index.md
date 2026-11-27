@@ -31,6 +31,14 @@ layout: hextra-home
 
 {{< hextra/feature-grid cols="2" >}}
   {{< hextra/feature-card
+    title="MariaDB language plugins"
+    icon="puzzle"
+    class="lab-wide"
+    subtitle=`<span class="lab-tag">prototype</span> The goal: a language plugin type for MariaDB. A server branch adds the plugin type, dollar-quoted bodies and CREATE FUNCTION / PROCEDURE ... LANGUAGE, so that a stored routine can be written in any language a plugin provides. lang_python and lang_js are the first two languages.`
+    link="https://github.com/OlafRocket/server/tree/lang-ext"
+    style="background: radial-gradient(ellipse at 50% 90%, rgba(190, 100, 30, 0.30), rgba(255, 255, 255, 0));"
+  >}}
+  {{< hextra/feature-card
     title="lang_python"
     icon="code"
     subtitle=`<span class="lab-tag">experimental</span> Python inside MariaDB: a server plugin that runs CPython 3.14 and numpy in the server process. Inline code, named functions, columnar aggregates.`

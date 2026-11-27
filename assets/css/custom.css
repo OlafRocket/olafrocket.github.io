@@ -186,3 +186,8 @@
     transparent
   );
 }
+
+/* A project card that spans the full width of the grid. */
+.hextra-feature-card.lab-wide {
+  grid-column: 1 / -1;
+}
