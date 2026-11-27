@@ -187,7 +187,7 @@
   );
 }
 
-/* A project card that spans the full width of the grid. */
-.hextra-feature-card.lab-wide {
-  grid-column: 1 / -1;
+/* Space between two card grids on the home page. */
+.lab-gap {
+  height: 1rem;
 }

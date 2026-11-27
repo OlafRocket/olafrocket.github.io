@@ -29,12 +29,11 @@ layout: hextra-home
 
 <h2 class="lab-section">Projects</h2>
 
-{{< hextra/feature-grid cols="2" >}}
+{{< hextra/feature-grid cols="3" >}}
   {{< hextra/feature-card
     title="MariaDB language plugins"
     icon="puzzle"
-    class="lab-wide"
-    subtitle=`<span class="lab-tag">prototype</span> The goal: a language plugin type for MariaDB. A server branch adds the plugin type, dollar-quoted bodies and CREATE FUNCTION / PROCEDURE ... LANGUAGE, so that a stored routine can be written in any language a plugin provides. lang_python and lang_js are the first two languages.`
+    subtitle=`<span class="lab-tag">prototype</span> The goal: a language plugin type for MariaDB. A server branch adds the plugin type, dollar-quoted bodies and CREATE FUNCTION / PROCEDURE ... LANGUAGE, so that a stored routine can be written in any language a plugin provides.`
     link="https://github.com/OlafRocket/server/tree/lang-ext"
     style="background: radial-gradient(ellipse at 50% 90%, rgba(190, 100, 30, 0.30), rgba(255, 255, 255, 0));"
   >}}
@@ -51,6 +50,11 @@ layout: hextra-home
     subtitle=`<span class="lab-tag">prototype</span> JavaScript stored routines for MariaDB. In preparation.`
     style="background: radial-gradient(ellipse at 50% 90%, rgba(96, 58, 34, 0.28), rgba(255, 255, 255, 0));"
   >}}
+{{< /hextra/feature-grid >}}
+
+<div class="lab-gap"></div>
+
+{{< hextra/feature-grid cols="2" >}}
   {{< hextra/feature-card
     title="y-cpp"
     icon="share"
